@@ -1,4 +1,5 @@
 package com.pluarlsight;
+
 import java.util.Scanner;
 
 public class Main {
@@ -25,12 +26,14 @@ public class Main {
         boolean isVerified = false;
         boolean isBanned = false;
         boolean isActive = true;
-        boolean isLoggedIn = true;
+        boolean isLoggedIn = false;
         boolean isOnline = false;
         int videosLiked = 20_000;
 
         String username;
+        String correctUsername = "0";
         String password;
+        String correctPassword = "0";
         String email = "example@hotmail.com";
         String birthday = "1/2/2000";
 
@@ -42,7 +45,7 @@ public class Main {
         System.out.println("Password: ");
         password = scan.nextLine();
 
-        System.out.println("Hello " + username + "! Welcome back!");
+
 
         /*while(password.equals("0"))
         if (password == "0"){
@@ -52,18 +55,44 @@ public class Main {
         }*/
 
 
-        while(!password.equals( "0")){
+        while (!password.equals(correctPassword) && !username.equals(correctUsername)) {
             System.out.println("Password / Username is incorrect. Please try again");
             password = scan.nextLine();
 
-            if (password.equals("0")){
+            if (!username.equals(correctUsername)) {
+                System.out.println("Username / password is incorrect. Please try again");
+                username = scan.nextLine();
+            }
+            if (password.equals(correctPassword) && username.equals(correctUsername)) {
                 System.out.println("Logged In Successfully!");
+                isLoggedIn = true;
+            //When if statement for username is here, does not check username and
+            //lets you log in regardless of username as long as password is right
+
+
+
             } /*else {
                 System.out.println("Try again");
             }
             This entire piece isnt necessary since it'll loop back to the sout password incorrect
             */
         }
+
+
+        //Remsey's Code
+
+        /*if(password.equals(correctPassword) && username.equals(correctUsername)) {
+            System.out.println("Logged in Succesfully");
+            isLoggedIn = true;
+        }
+        else
+        {
+            System.out.println("Password/Username is incorrect");
+            isLoggedIn = false;
+        }*/
+
+        System.out.println("Hello " + username + "! Welcome back!");
+
 
     }
 }
