@@ -3,8 +3,8 @@ package com.pluarlsight;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        //System.out.println("Hello world!");
 
         /*
         Feautures:
@@ -44,6 +44,9 @@ public class Main {
         username = scan.nextLine();
         System.out.println("Password: ");
         password = scan.nextLine();
+
+
+
 
 
 
@@ -92,7 +95,17 @@ public class Main {
         }*/
 
         System.out.println("Hello " + username + "! Welcome back!");
+    Video movie1 = new Video("Spooderman");
+    movie1.likeVideo();
 
-
+    //Main Method
+    LikeTheVideo("CocoMaster","How to make for loops in Java");
     }
+
+    //LikeVideo Method
+    public static void LikeTheVideo(String usersName, String videoTitle) {
+        System.out.println(usersName + " liked the video: " + videoTitle);
+    }
+
+
 }

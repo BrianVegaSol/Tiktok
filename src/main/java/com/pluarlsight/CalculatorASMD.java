@@ -36,6 +36,12 @@ public class CalculatorASMD {
     }
 
     public static void main(String[] args) {
+        //If the while works, a l w a y s initialize vars early so there arent scope issues
+        //like with the while loop xO
+
+
+
+
         Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to My Calculator App!");
         System.out.println("Select an operation to get started: " +
@@ -46,13 +52,21 @@ public class CalculatorASMD {
         char operation = scan.next().charAt(0);
         char operationCheck = Character.toUpperCase(operation);
 
+        //TRY DECLARING NUMS OUTSIDE OF THE SCOPE OF THE WHILE LOOP
+        //SO THAT THE SWITCH DOESNT FLIP OUT MAN
+
+
+        float num1;
+        float num2;
+
+
 
         //All this is unnecessary if in the method data types are all float/doubles
        /* while(operationCheck != 'A' || operationCheck != 'S' || operationCheck != 'M' || operationCheck != 'D') {
             System.out.println("Invalid input");
             operation = scan.next().charAt(0);
             operationCheck = Character.toUpperCase(operation);
-        }
+        }*/
             if (operationCheck == 'A' || operationCheck == 'S' || operationCheck == 'M') {
                 System.out.println("Enter your first number: ");
                 int num1 = scan.nextInt();
@@ -64,16 +78,18 @@ public class CalculatorASMD {
                 System.out.println("Enter your second number: ");
                 float num2 = scan.nextFloat();
             }
-        */
+
         //
 
 
 
-
+        //Hopefully initializing nums before while loop works so I can delete this
         System.out.println("Enter your first number: ");
-        float num1 = scan.nextFloat();
+        num1 = scan.nextFloat();
         System.out.println("Enter your second number: ");
-        float num2 = scan.nextFloat();
+        num2 = scan.nextFloat();
+        //
+
 
             switch (operationCheck) {
                 case 'A':
