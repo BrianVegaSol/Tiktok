@@ -56,8 +56,8 @@ public class CalculatorASMD {
         //SO THAT THE SWITCH DOESNT FLIP OUT MAN
 
 
-        float num1;
-        float num2;
+        float num1 = 0f;
+        float num2 = 0f;
 
 
 
@@ -69,14 +69,14 @@ public class CalculatorASMD {
         }*/
             if (operationCheck == 'A' || operationCheck == 'S' || operationCheck == 'M') {
                 System.out.println("Enter your first number: ");
-                int num1 = scan.nextInt();
+                num1 = scan.nextInt();
                 System.out.println("Enter your second number: ");
-                int num2 = scan.nextInt();
+                num2 = scan.nextInt();
             } else if (operationCheck == 'D') {
                 System.out.println("Enter your first number: ");
-                float num1 = scan.nextFloat();
+                num1 = scan.nextFloat();
                 System.out.println("Enter your second number: ");
-                float num2 = scan.nextFloat();
+                num2 = scan.nextFloat();
             }
 
         //
@@ -84,10 +84,7 @@ public class CalculatorASMD {
 
 
         //Hopefully initializing nums before while loop works so I can delete this
-        System.out.println("Enter your first number: ");
-        num1 = scan.nextFloat();
-        System.out.println("Enter your second number: ");
-        num2 = scan.nextFloat();
+
         //
 
 
